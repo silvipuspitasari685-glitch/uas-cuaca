@@ -5,17 +5,10 @@
         { "src": "static/**", "use": "@vercel/static-build" } 
     ],
     "routes": [
+    
         { "src": "/api/getWeather", "dest": "/Api/getWeather.js" },
-        { "src": "/(.*\\.(css|js|html|ico|png|jpg|jpeg))", "dest": "/static/$1" },
-        { "src": "/", "dest": "/static/index.html" },
-{
-    "version": 2,
-    "rewrites": [
-        { 
-            "source": "/api/(.*)", 
-            "destination": "/Api/$1" 
-        }
-    ]
-}
+        
+
+        { "src": "/(.*)", "dest": "/static/$1" }
     ]
 }
