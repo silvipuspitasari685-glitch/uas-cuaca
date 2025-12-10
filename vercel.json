@@ -5,10 +5,7 @@
         { "src": "static/**", "use": "@vercel/static-build" } 
     ],
     "routes": [
-    
         { "src": "/api/getWeather", "dest": "/Api/getWeather.js" },
-        
-
         { "src": "/(.*)", "dest": "/static/$1" }
     ]
 }
