@@ -3,13 +3,13 @@
     "builds": [
         { "src": "Api/getWeather.js", "use": "@vercel/node" },
 
-        { "src": "public/**", "use": "@vercel/static-build" } 
+        { "src": "static/**", "use": "@vercel/static-build" } 
     ],
     "routes": [
         { "src": "/api/getWeather", "dest": "/Api/getWeather.js" },
 
-        { "src": "/(.*\\.(css|js|html|ico|png|jpg|jpeg))", "dest": "/public/$1" },
+        { "src": "/(.*\\.(css|js|html|ico|png|jpg|jpeg))", "dest": "/static/$1" },
         
-        { "src": "/", "dest": "/public/index.html" }
+        { "src": "/", "dest": "/static/index.html" }
     ]
 }
